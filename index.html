@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Fight</title>
+    <link rel="stylesheet" href="multiplayer.css">
+</head>
+
+<body>
+    <!------ container ------->
+    <div id="container">
+
+        <!------ play button ------->
+        <div id="play" onclick="display()">
+            <h1>PLAY</h1>
+        </div>
+
+        <!------ red bars ------->
+        <progress id="bar1" class="weaponbar" value="0" max="50"></progress>
+        <progress id="bar2" class="weaponbar" value="0" max="50"></progress>
+
+        <!------ Health bar ------->
+        <progress id="health1" class="health" value="100" max="100"></progress>
+        <progress id="health2" class="health" value="100" max="100"></progress>
+
+        <!------ Characters & other ------->
+        <div class="impact hide"></div>
+        <div class="CaptainAmerica hide"></div>
+        <div class="IronMan hide"></div>
+
+        <!-- For Android & Small Resolution Devices -->
+
+        <!-- Button For CaptainAmerica -->
+        <div id="leftBtn" class="p1btns hide" onclick="moveLeft()"></div>
+        <div id="rightBtn" class="p1btns hide" onclick="moveRight()"></div>
+        <div id="jumpBtn" class="p1btns hide" onclick="Jump()"></div>
+        <div id="punchBtn" class="p1btns hide" onclick="p1punch()"></div>
+        <div id="shootBtn" class="p1btns hide" onclick="throwShield()"></div>
+    </div>
+    <script src="multi.js"></script>
+
+</body>
+
+</html>
