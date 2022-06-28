@@ -22,7 +22,7 @@
     text-align: center;
     position: relative;
     margin: auto;
-    font-family: cursive;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-image: linear-gradient(red, orangered);
     padding: 1%;
     display: flexbox;
@@ -41,6 +41,7 @@
     width: 20%;
     position: absolute;
     bottom: 90%;
+    border: 2px black solid;
 }
 
 .weaponbar {
@@ -72,11 +73,11 @@
 
 .punch {
     height: 5%;
-    width: 10%;
+    width: 13%;
     position: absolute;
     background-image: url(img/hand.png);
     background-repeat: no-repeat;
-    background-size: 100% 120%;
+    background-size: 150% 120%;
     background-position: center;
     transition: 0.5s;
 }
@@ -86,14 +87,14 @@
     width: 10%;
     position: absolute;
     background-image: url(img/shield.png);
-    background-size: 70% 100%;
+    background-size: 80% 70%;
     background-repeat: no-repeat;
     transition: 1s linear;
 }
 
 .jump1 {
     animation: jump 0.4s linear 1;
-    background-size: 290% 100%;
+    background-size: 250% 100%;
 }
 
 .walkAnime {
@@ -211,14 +212,13 @@
 
 .punch2 {
     height: 5%;
-    width: 12%;
+    width: 13%;
     position: absolute;
     background-image: url(img/ironhand.png);
     background-repeat: no-repeat;
-    background-size: 120% 230%;
+    background-size: 120% 290%;
     background-position: center;
     transition: 1s;
-    border-radius: 20px;
     z-index: 2;
 }
 
@@ -232,7 +232,7 @@
     width: 10%;
     position: absolute;
     background-image: radial-gradient(yellow, red, blue);
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     border-radius: 1%;
     transition: 1s linear;
@@ -291,4 +291,22 @@
 
 .hide {
     display: none;
+}
+
+@media screen and (max-width:918px) {
+    .punch {
+        background-size: 160% 120%;
+        background-position: -50px 1px;
+    }
+    .punch2 {
+        background-size: 200% 190%;
+        background-position: -40px -10px;
+    }
+}
+
+@media screen and (max-width:662px) {
+    .punch {
+        background-size: 170% 120%;
+        background-position: -50px 1px;
+    }
 }
