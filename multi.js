@@ -92,7 +92,7 @@ function Jump() {
 
     setTimeout(() => {
         CaptainAmerica.classList.remove("jump1");
-    }, 500);
+    }, 400);
 }
 
 //--------------------------- CaptainAmerica PUNCH ------------------------
@@ -135,7 +135,7 @@ function throwShield() {
 
         setInterval(() => {
             container.removeChild(shield);
-        }, 1000);
+        },2000);
 
         bar1.value = 0;
     }
@@ -227,7 +227,7 @@ function mainGameFunction() {
                 }, 10);
                 setInterval(() => {
                     container.removeChild(ironmanLaser);
-                }, 1000);
+                }, 2000);
                 bar2.value = 0
             }
         }
@@ -241,7 +241,7 @@ function mainGameFunction() {
                 IronMan.classList.remove("jump2");
             }, 800);
         }
-    }, 200);
+    }, 100);
 
 
     // ---------------------------- PUNcH COLLLISON ---------------------------------
