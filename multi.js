@@ -62,7 +62,7 @@ function moveRight() {
     let playerx2 = parseInt(window.getComputedStyle(IronMan).getPropertyValue("left"));
     CaptainAmerica.classList.add("walkAnime");
 
-    if (playerx < playerx2 - 50) {
+    if (playerx < playerx2 - 100) {
         CaptainAmerica.style.left = playerx + 60 + "px";
     }
     setTimeout(() => {
