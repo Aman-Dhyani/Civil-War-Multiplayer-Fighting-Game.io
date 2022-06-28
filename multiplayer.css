@@ -93,9 +93,9 @@
 }
 
 .jump1 {
-    animation: jump 0.4s linear 1;
-    background-size: 300% 100%;
-    transition: 0.5s;
+    animation: jump 0.5s linear 1;
+    background-size: 250% 80%;
+    transition: 1s;
 }
 
 .walkAnime {
@@ -141,17 +141,21 @@
 
 @keyframes jump {
     20% {
+        filter: blur(1px);
         bottom: 30%;
         background-image: url(img/jump.png);
     }
 
     50% {
+        filter: blur(0px);
         bottom: 45%;
     }
 
     80% {
-        bottom: 30%;
+        filter: blur(1px);
+        bottom: 10%;
         background-image: url(img/jump.png);
+        background-size: 300% 80%;
     }
 }
 
@@ -229,7 +233,7 @@
 }
 
 .ironmanLaser {
-    height: 4%;
+    height:2%;
     width: 10%;
     position: absolute;
     background-image: radial-gradient(yellow, red, blue);
@@ -283,8 +287,8 @@
 
 .impact {
     background-color: red;
-    width: 1000px;
-    height: 550px;
+    width: 100%;
+    height:100vh;
     opacity: 0.5;
     z-index: 5;
 }
