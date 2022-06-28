@@ -94,7 +94,8 @@
 
 .jump1 {
     animation: jump 0.4s linear 1;
-    background-size: 250% 100%;
+    background-size: 300% 100%;
+    transition: 0.5s;
 }
 
 .walkAnime {
