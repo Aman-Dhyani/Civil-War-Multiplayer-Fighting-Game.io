@@ -22,29 +22,16 @@ let ironmanWarning = new Audio("music/iron-warning.m4a");
 let capDialogue = new Audio("music/cap-dialogue.m4a");
 let ironmanDialogue = new Audio("music/iron-win.m4a");
 
-// ----------------- CaptainAmerica BUTTONS ------------------------
-let leftBtn = document.querySelector("#leftBtn");
-let rightBtn = document.querySelector("#rightBtn");
-let jumpBtn = document.querySelector("#jumpBtn");
-let punchBtn = document.querySelector("#punchBtn");
-let shootBtn = document.querySelector("#shootBtn");
-
 // --------------- Display function ---------------------
 function display() {
     music.play();
     play.classList.add("hide");
     CaptainAmerica.classList.remove("hide");
     IronMan.classList.remove("hide");
-    leftBtn.classList.remove("hide");
-    rightBtn.classList.remove("hide");
-    jumpBtn.classList.remove("hide");
-    punchBtn.classList.remove("hide");
-    shootBtn.classList.remove("hide");
 
     //--- calling main function--------------------
     window.requestAnimationFrame(mainGameFunction);
 }
-
 
 // ------------------- CaptainAmerica CONTROLS - (KEYBOARD) --------------------------------
 
@@ -117,8 +104,8 @@ function p1punch() {
     let punch = document.createElement("div");
     container.appendChild(punch);
 
-    punch.style.left = playerx + 50 + "px";
-    punch.style.top = playery + 70 + "px";
+    punch.style.left = playerx + 60 + "px";
+    punch.style.top = playery + 50 + "px";
     punch.classList.add("punch");
 
     setTimeout(() => {
@@ -140,7 +127,7 @@ function throwShield() {
         container.appendChild(shield);
         shield.classList.add("shield");
         shield.style.left = playerx + "px";
-        shield.style.top = playery + 50 + "px";
+        shield.style.top = playery + 30 + "px";
 
         setInterval(() => {
             shield.style.left = playerx + 1000 + "px";
@@ -170,9 +157,9 @@ function mainGameFunction() {
         function p2MoveRight() {
 
             let playerx = parseInt(window.getComputedStyle(IronMan).getPropertyValue("left"));
-            IronMan.style.left = playerx + 60 + "px";
+            IronMan.style.left = playerx + 80 + "px";
 
-            if (playerx > 820) {
+            if (playerx > 10 + "px") {
                 IronMan.style.left = playerx + "px";
             }
         }
@@ -204,8 +191,8 @@ function mainGameFunction() {
             let punch2 = document.createElement("div");
             container.appendChild(punch2);
             IronMan.style.left = playerx - 20 + "px";
-            punch2.style.left = playerx - 120 + "px";
-            punch2.style.top = playery + 50 + "px";
+            punch2.style.left = playerx - 80 + "px";
+            punch2.style.top = playery + 40 + "px";
             punch2.classList.add("punch2");
 
             setInterval(() => {
@@ -233,7 +220,7 @@ function mainGameFunction() {
                 ironmanLaser.classList.add("ironmanLaser");
 
                 ironmanLaser.style.left = playerx + "px";
-                ironmanLaser.style.top = playery + 50 + "px";
+                ironmanLaser.style.top = playery + 30 + "px";
 
                 setInterval(() => {
                     ironmanLaser.style.left = playerx - 1050 + "px";
@@ -424,11 +411,6 @@ function mainGameFunction() {
             gameover.play();
             capDialogue.play();
             clearInterval(intrvl);
-            leftBtn.classList.add("hide");
-            rightBtn.classList.add("hide");
-            jumpBtn.classList.add("hide");
-            punchBtn.classList.add("hide");
-            shootBtn.classList.add("hide");
             win = "cap"
         }
 
@@ -439,13 +421,10 @@ function mainGameFunction() {
             CaptainAmerica.classList.add("hide");
             gameover.play();
             music.pause();
+            let punch = document.querySelector(".punch")
+            punch.classList.add("hide")
             ironmanDialogue.play();
             clearInterval(intrvl);
-            leftBtn.classList.add("hide");
-            rightBtn.classList.add("hide");
-            jumpBtn.classList.add("hide");
-            punchBtn.classList.add("hide");
-            shootBtn.classList.add("hide");
 
             setTimeout(() => {
                 gameover.pause();
