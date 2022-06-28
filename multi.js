@@ -241,7 +241,7 @@ function mainGameFunction() {
                 IronMan.classList.remove("jump2");
             }, 800);
         }
-    }, 100);
+    }, 200);
 
 
     // ---------------------------- PUNcH COLLLISON ---------------------------------
