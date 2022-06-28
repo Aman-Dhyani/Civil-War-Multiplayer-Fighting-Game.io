@@ -104,7 +104,7 @@ function p1punch() {
     let punch = document.createElement("div");
     container.appendChild(punch);
 
-    punch.style.left = playerx + 60 + "px";
+    punch.style.left = playerx + 50 + "px";
     punch.style.top = playery + 50 + "px";
     punch.classList.add("punch");
 
@@ -159,7 +159,7 @@ function mainGameFunction() {
             let playerx = parseInt(window.getComputedStyle(IronMan).getPropertyValue("left"));
             IronMan.style.left = playerx + 80 + "px";
 
-            if (playerx > 10 + "px") {
+            if (playerx > 900 + "px") {
                 IronMan.style.left = playerx + "px";
             }
         }
@@ -191,7 +191,7 @@ function mainGameFunction() {
             let punch2 = document.createElement("div");
             container.appendChild(punch2);
             IronMan.style.left = playerx - 20 + "px";
-            punch2.style.left = playerx - 80 + "px";
+            punch2.style.left = playerx - 60 + "px";
             punch2.style.top = playery + 40 + "px";
             punch2.classList.add("punch2");
 
@@ -241,7 +241,7 @@ function mainGameFunction() {
                 IronMan.classList.remove("jump2");
             }, 800);
         }
-    }, 200);
+    }, 100);
 
 
     // ---------------------------- PUNcH COLLLISON ---------------------------------
@@ -421,8 +421,6 @@ function mainGameFunction() {
             CaptainAmerica.classList.add("hide");
             gameover.play();
             music.pause();
-            let punch = document.querySelector(".punch")
-            punch.classList.add("hide")
             ironmanDialogue.play();
             clearInterval(intrvl);
 
