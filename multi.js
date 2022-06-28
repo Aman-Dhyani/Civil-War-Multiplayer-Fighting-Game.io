@@ -159,7 +159,7 @@ function mainGameFunction() {
             let playerx = parseInt(window.getComputedStyle(IronMan).getPropertyValue("left"));
             IronMan.style.left = playerx + 80 + "px";
 
-            if (playerx > 900 + "px") {
+            if (playerx < 900 + "px") {
                 IronMan.style.left = playerx + "px";
             }
         }
@@ -241,7 +241,7 @@ function mainGameFunction() {
                 IronMan.classList.remove("jump2");
             }, 800);
         }
-    }, 100);
+    }, 300);
 
 
     // ---------------------------- PUNcH COLLLISON ---------------------------------
